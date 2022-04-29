@@ -10,6 +10,9 @@ export class Page extends React.Component {
         this.handleCatList = this.handleCatList.bind(this);
     }
 
+    /*
+     * Fetch data from URL
+     */
     getCatList() {
         const baseUrl = "http://agl-developer-test.azurewebsites.net";
         let url = baseUrl + "/people.json";
@@ -20,6 +23,9 @@ export class Page extends React.Component {
             })
     }
 
+    /*
+     * Change the data format to display 
+     */
     handleCatList(data) {
         let result = {};
         for (let person of data) {
